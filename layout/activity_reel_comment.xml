@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ReelCommentActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/comments_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground" />
+
+<!--    <VideoView-->
+<!--        android:id="@+id/post_image_comment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="350dp"-->
+<!--        android:layout_below="@+id/comments_toolbar"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/profile">-->
+
+<!--    </VideoView>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comments_toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="8dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="2dp"
+        android:layout_alignParentBottom="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_comment_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:civ_border_color="@color/text"
+            app:civ_border_width="1dp"
+            android:src="@drawable/profile"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:id="@+id/reel_comment_text"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Add a comment..."
+            android:background="@color/transparent"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:textColorHint="@color/text"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_comment_send"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/send"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

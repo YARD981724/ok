@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.chatActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout_profile"
+        android:layout_width="match_parent"
+        app:elevation="12dp"
+        android:elevation="12dp"
+        android:background="@drawable/btn_profile"
+        android:backgroundTint="@color/shimmerColors"
+        android:layout_height="52dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/chat_profile_toolbar"
+            android:layout_width="match_parent"
+            android:elevation="10dp"
+
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/left_arrow"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/arrow"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/option_profile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/text"
+                    android:layout_gravity="center"
+                    android:src="@drawable/profile" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:text="userName"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold|normal" />
+
+                    <TextView
+                        android:id="@+id/view_online"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:text="online"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/call_center"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:src="@drawable/video_call"
+                    android:layout_gravity="center" />
+
+
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar_layout_profile"
+        android:orientation="vertical">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/charRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_below="@id/app_bar_layout_profile"
+            android:layout_marginBottom="60dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_above="@id/linear1"
+        android:weightSum="4">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="5"
+            android:elevation="10dp"
+            android:padding="10dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="10dp"
+            >
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+                    <EditText
+                        android:id="@+id/messageBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/transparent"
+                        android:hint="Message"
+                        android:gravity="start"
+                        android:padding="10dp"
+                        android:paddingStart="25dp"
+                        android:textSize="16sp"
+                        android:textColorHint="@color/text"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/attachment"
+                    android:layout_width="25dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/attachment_24" />
+
+                <ImageView
+                    android:id="@+id/camera"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/camera" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/sentButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:civ_border_overlay="true"
+            app:civ_circle_background_color="@color/green_hex"
+            android:src="@android:drawable/ic_menu_send" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

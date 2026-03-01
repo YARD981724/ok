@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginEnd="100dp"
+    android:gravity="start"
+    android:layout_gravity="start">
+
+    <LinearLayout
+        android:id="@+id/mLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/receiver">
+
+
+
+        <TextView
+            android:id="@+id/sent_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text"
+            android:paddingHorizontal="10dp"
+            android:text="send the message"
+            android:textStyle="normal"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/receiveTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text"
+            android:layout_gravity="end"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:gravity="end"
+            android:visibility="gone"
+            android:text="receive the message"
+            android:textStyle="bold"
+            android:textSize="10sp"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/receive_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:scaleType="centerCrop"
+        android:src="@drawable/picture"/>
+</LinearLayout>
